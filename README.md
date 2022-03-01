@@ -50,15 +50,16 @@ operation is done by adding additional circuitry as shown in
 fig.1.In our present project, by using IMC scheme we implement
 four in-memory vector computations which includes
 NAND,NOR,IMC,XOR.
+### SRAM circuit
 
 ## Circuit Operation
 
 Whenever the RWL=1, then only the in-memory computations
 takes place and intially the RBL is precharged and the
 dicharging of RBL voltage depends on the data stored in the
-cell1(A) and cell2(B), shown in fig.2.
+cell1 (Q1) and cell2 (Q2).
 ### 1.NOR OPERATION
-
+![nor sch](https://user-images.githubusercontent.com/99113992/156104263-c76ae031-c6b3-4905-9b25-834a731a1afa.PNG)
 When A and B both are 0’s then the
 precharged value of RBL remains same and it’s considered as
 logic 1 and for remaining combinations of A and B RBL gets
@@ -72,7 +73,9 @@ discharged and output is logic 0; when A=0,B=1 or A=1,B=0
 then the RWL signal had to be timed such that RBL doesn’t
 discharge completely and the trip point of INV3 in fig.2 is
 chosen that the output goes only high for the case A=1,B=1.
-3.XOR OPERATION: By making the source of M1 transistor
+### 3.XOR OPERATION
+![xor sch](https://user-images.githubusercontent.com/99113992/156104321-7081955b-7346-4b88-b463-dcc32bfdb976.PNG)
+By making the source of M1 transistor
 of Cell1 ”VDD” and source of M1 transistor of Cell2
 ”GND”, M1-M2-M3-M4 form a voltage divider, shown in
 fig.3.And if A and B are both 0’s or 1’s then the RBL voltage
@@ -84,21 +87,34 @@ divider and INV1 implements ’A IMP B’.
 
 ## Simulation Waveforms
 
-### 1.Write Operation
+### 1.NOR Operation
 
-As we have discussed earlier when WL=1,then the write operation is possible and the Q gets the BL value and Qb gets the inverted value of Q.And when WL=0,the data stored in
-the memory element doesn't change because of the access transistors are in inactive state.
+#### a.Q1Q2 = 00 or 11
+![nor 00,11](https://user-images.githubusercontent.com/99113992/156104696-d0e2530e-d8b8-47f2-b9be-a4a49d11de91.PNG)
 
-![write operation](https://user-images.githubusercontent.com/99113992/152926807-6d204d6f-d516-4b4b-bc15-90d63d32310e.PNG)
+#### b.Q1Q2 = 01
+![nor 0,1](https://user-images.githubusercontent.com/99113992/156104741-ba97b459-19ac-462a-9738-2d04379aa1fe.PNG)
 
-### 2.READ Operation
+#### c.Q1Q2 = 10
+![nor 10](https://user-images.githubusercontent.com/99113992/156104782-5bc95f18-797b-45ca-b7b5-afdcbfee6242.PNG)
 
-When RE=1 and REB=0, then the READ operation will takes place with the Transmission gate is in active state and the the data present in the memory element(Q) is passed through the inverter and then transimission gate to the RD terminal.Note that the RD terminal gets the inverted value of Q(i.e, Qb) because of the inverter, but if we want the Q to 
-comeout at the RD terminal we need to connect that extra circuit to the Qb instead of Q.
 
-![READ output](https://user-images.githubusercontent.com/99113992/152926529-253768c3-2502-4da1-b278-3e1437624971.PNG)
+### 2.NAND Operation
 
-Note that there is a small disturbance in the RD terminal during when the transmission gate is in off state(i.e, when RE=0 and REB=1), it's because when the transmission gate is in inactive condition there will be some leakage current since both of the nmos and pmos is in off state and moreover what we actually interested is during when transmission gate is in active state at which the READ Operation will takes place, So it doesn't matter to us when the transmission gate is in inactive state even if there is small disturbance in the output waveform. 
+#### a.Q1Q2 = 01 or 10
+![nand 01,10 correct](https://user-images.githubusercontent.com/99113992/156104403-ca1918e8-ee22-4a5c-90a2-e81b90d91f8e.PNG)
+
+#### b.Q1Q2 = 00
+![nand 00](https://user-images.githubusercontent.com/99113992/156104571-279ffbc9-26f6-4c00-a44f-6481c3a0c66c.PNG)
+
+#### b.Q1Q2 = 11
+![nand 11,correct](https://user-images.githubusercontent.com/99113992/156104642-495e5a95-b8e6-4403-94ff-7cae7b594020.PNG)
+
+
+### 2.XOR Operation
+
+#### a.Q1Q2 = 01 or 10
+![xor 01,10](https://user-images.githubusercontent.com/99113992/156104886-006d1fc3-dcff-4c2d-b68f-38bc77fd6917.PNG)
 
 ## Conclution
 
