@@ -41,7 +41,7 @@ bottleneck.
 
 ## Circuit Design and Details
 
-
+![1](https://user-images.githubusercontent.com/99113992/156103652-cac5bf4b-8bd8-4dad-a428-a66f4bd467bb.PNG)
 The 8T SRAM circuit is shown in fig.1.This circuit avoids
 the read operation noise by isolating the memory part(latch)
 of the cell from external environment by disabling the access
