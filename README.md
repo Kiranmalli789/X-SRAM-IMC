@@ -103,29 +103,39 @@ the INV3 and INV2 we get the XOR operation of A and B.
 #### a.Q1Q2 = 00 or 11
 ![nor 00,11](https://user-images.githubusercontent.com/99113992/156104696-d0e2530e-d8b8-47f2-b9be-a4a49d11de91.PNG)
 
+When Q1,Q2 = 0,0 then NOR operation: out = Q1 NOR Q2 = 1;
+
+When Q1,Q2 = 1,1 then NOR operation: out = Q1 NOR Q2 = 0;
 #### b.Q1Q2 = 01
 ![nor 0,1](https://user-images.githubusercontent.com/99113992/156104741-ba97b459-19ac-462a-9738-2d04379aa1fe.PNG)
 
+When Q1,Q2 = 0,1 then NOR operation: out = Q1 NOR Q2 = 0;
 #### c.Q1Q2 = 10
 ![nor 10](https://user-images.githubusercontent.com/99113992/156104782-5bc95f18-797b-45ca-b7b5-afdcbfee6242.PNG)
 
-
+When Q1,Q2 = 1,0 then NOR operation: out = Q1 NOR Q2 = 0;
 ### 2.NAND Operation
 
 #### a.Q1Q2 = 01 or 10
 ![nand 01,10 correct](https://user-images.githubusercontent.com/99113992/156104403-ca1918e8-ee22-4a5c-90a2-e81b90d91f8e.PNG)
 
+When Q1,Q2 = 0,1 then NOR operation: out = Q1 NAND Q2 = 1;
 #### b.Q1Q2 = 00
 ![nand 00](https://user-images.githubusercontent.com/99113992/156104571-279ffbc9-26f6-4c00-a44f-6481c3a0c66c.PNG)
+
+When Q1,Q2 = 0,0 then NAND operation: out = Q1 NAND Q2 = 1;
 
 #### b.Q1Q2 = 11
 ![nand 11,correct](https://user-images.githubusercontent.com/99113992/156104642-495e5a95-b8e6-4403-94ff-7cae7b594020.PNG)
 
+When Q1,Q2 = 1,1 then NOR operation: out = Q1 NAND Q2 = 0;
 
 ### 2.XOR Operation
 
 #### a.Q1Q2 = 01 or 10
 ![xor 01,10](https://user-images.githubusercontent.com/99113992/156104886-006d1fc3-dcff-4c2d-b68f-38bc77fd6917.PNG)
+
+When Q1,Q2 = 1,0 or 0,1 then XOR operation: out = Q1 XOR Q2 = 1;
 
 ## Conclution
 
