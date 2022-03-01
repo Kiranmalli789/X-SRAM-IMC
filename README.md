@@ -64,8 +64,8 @@ cell1 (Q1) and cell2 (Q2).
 When A and B both are 0’s then the
 precharged value of RBL remains same and it’s considered as
 logic 1 and for remaining combinations of A and B RBL gets
-discharged and it’s considered as logic 0 and this is shown in
-fig.2.
+discharged and it’s considered as logic 0.
+
 ### 2.NAND OPERATION
 ![nand sch](https://user-images.githubusercontent.com/99113992/156104194-a79e34e6-7826-4321-aa10-10e947430a43.PNG)
 
@@ -74,6 +74,7 @@ discharged and output is logic 0; when A=0,B=1 or A=1,B=0
 then the RWL signal had to be timed such that RBL doesn’t
 discharge completely and the trip point of INV3 in fig.2 is
 chosen that the output goes only high for the case A=1,B=1.We obtained this by skewing the inveter connected to RBL.
+[nand netlist.txt](https://github.com/Kiranmalli789/X-SRAM-IMC/files/8159059/nand.netlist.txt)
 ### 3.XOR OPERATION
 ![xor sch](https://user-images.githubusercontent.com/99113992/156104321-7081955b-7346-4b88-b463-dcc32bfdb976.PNG)
 By making the source of M1 transistor
