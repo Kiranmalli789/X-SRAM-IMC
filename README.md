@@ -137,7 +137,7 @@ When Q1,Q2 = 1,1 then NOR operation: out = Q1 NAND Q2 = 0;
 
 When Q1,Q2 = 1,0 or 0,1 then XOR operation: out = Q1 XOR Q2 = 1;
 
-## Conclution
+## Conclusion
 
 By replacing the existing CVN Architecture with the IMC technique we can reduce the latency and power consumption of the boolean expression, since in IMC scheme all the rows 
 are simultaneously on at a time there by reducing the time required for over memory read and also there is no need for the data movememts from memory to ALU, since the arthmetic 
