@@ -57,12 +57,17 @@ Whenever the RWL=1, then only the in-memory computations
 takes place and intially the RBL is precharged and the
 dicharging of RBL voltage depends on the data stored in the
 cell1(A) and cell2(B), shown in fig.2.
-1.NOR OPERATION: When A and B both are 0’s then the
+### 1.NOR OPERATION
+
+When A and B both are 0’s then the
 precharged value of RBL remains same and it’s considered as
 logic 1 and for remaining combinations of A and B RBL gets
 discharged and it’s considered as logic 0 and this is shown in
 fig.2.
-2.NAND OPERATION: When A=1 and B=1, RBL gets
+### 2.NAND OPERATION
+![nand sch](https://user-images.githubusercontent.com/99113992/156104194-a79e34e6-7826-4321-aa10-10e947430a43.PNG)
+
+When A=1 and B=1, RBL gets
 discharged and output is logic 0; when A=0,B=1 or A=1,B=0
 then the RWL signal had to be timed such that RBL doesn’t
 discharge completely and the trip point of INV3 in fig.2 is
