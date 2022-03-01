@@ -81,6 +81,11 @@ discharge completely and the trip point of INV3 in fig.2 is
 chosen that the output goes only high for the case A=1,B=1.We obtained this by skewing the inveter connected to RBL.
 
 ### 3.XOR OPERATION
+By NORing the outputs of AND and NOR, the XOR operation is easily acheived.But we present a another way to acheive the XOR Operation by using Voltage Divider technique which 
+is shown in this subsection.
+
+[xor netlist.txt](https://github.com/Kiranmalli789/X-SRAM-IMC/files/8159085/xor.netlist.txt)
+
 ![xor sch](https://user-images.githubusercontent.com/99113992/156104321-7081955b-7346-4b88-b463-dcc32bfdb976.PNG)
 
 By making the source of M1 transistor
@@ -143,9 +148,9 @@ DECEMBER 2018
 
 Kunal Ghosh,Co-founder of VLSI System Design Corporation Pvt. Ltd.
 
-Cloud Based Analog IC Design Hackathon and IIT Hyderabad
+Cloud Based Analog IC Design Hackathon and IIT Hyderabad.
 
-Synopsys India
+Synopsys India.
 
 ## Author
 
